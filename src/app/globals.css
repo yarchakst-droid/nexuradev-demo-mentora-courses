@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f5f1e6;
+  --color-paper-deep: #eae3cf;
+  --color-surface: #fffdf8;
+  --color-ink: #15160f;
+  --color-ink-soft: #52523f;
+  --color-stone: #928f78;
+  --color-line: #e2dbc4;
+
+  --color-moss: #1f3a2e;
+  --color-moss-deep: #142720;
+  --color-moss-soft: #dde6de;
+
+  --color-gold: #c68a3f;
+  --color-gold-soft: #f0dcb5;
+  --color-gold-deep: #94641f;
+
+  --color-rust: #b0432b;
+
+  --font-display: var(--font-instrument);
+  --font-body: var(--font-manrope);
+
+  --ease-signal: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-moss-deep);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-12deg);
+  }
+}
+
+.badge-shine-sweep {
+  animation: shine-sweep 2.8s ease-in-out infinite;
+  animation-delay: var(--shine-delay, 0s);
+}
