@@ -62,14 +62,6 @@ export function ChevronDownIcon({ className }: IconProps) {
   );
 }
 
-export function ArrowRightIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={base} className={className}>
-      <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 export function ChevronLeftIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={base} className={className}>
@@ -92,15 +84,6 @@ export function TrophyIcon({ className }: IconProps) {
       <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" strokeLinejoin="round" />
       <path d="M7 5.5H4.5a1 1 0 0 0-1 1.2c.35 1.7 1.4 3.3 3.5 3.7M17 5.5h2.5a1 1 0 0 1 1 1.2c-.35 1.7-1.4 3.3-3.5 3.7" strokeLinecap="round" />
       <path d="M12 13v3.5M9 20h6M9.5 16.5h5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-export function SparkIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12 2.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z" />
-      <path d="M19 15c.3 1.9 1 2.6 2.9 2.9-1.9.3-2.6 1-2.9 2.9-.3-1.9-1-2.6-2.9-2.9 1.9-.3 2.6-1 2.9-2.9Z" />
     </svg>
   );
 }
