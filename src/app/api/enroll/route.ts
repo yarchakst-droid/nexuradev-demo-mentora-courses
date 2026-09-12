@@ -1,12 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DICTIONARIES } from "@/i18n/dictionary";
+import { resolveLang } from "@/lib/lang";
 import { enrollInCourse } from "@/lib/store";
 import { formRateLimit, getClientIp } from "@/lib/rate-limit";
-import type { Lang } from "@/lib/types";
-
-function resolveLang(value: unknown): Lang {
-  return value === "en" || value === "ru" ? value : "uk";
-}
 
 export async function POST(request: NextRequest) {
   if (!formRateLimit(getClientIp(request)).success) {
