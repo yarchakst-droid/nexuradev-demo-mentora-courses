@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { LANG_LABELS } from "@/i18n/dictionary";
 import { useLang } from "@/i18n/LangContext";
 import type { Lang } from "@/lib/types";
@@ -13,10 +14,30 @@ const LANG_OPTIONS: Lang[] = ["uk", "en", "ru"];
 
 export default function CinematicHero() {
   const { lang, t, setLang } = useLang();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Once scrolled past, this video has nothing left to show and no reason to
+  // keep decoding/compositing every frame — pause it out of view so it stops
+  // costing anything for the rest of the scroll, resume if scrolled back up.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className={styles.hero}>
       <video
+        ref={videoRef}
         className={styles.bgVideo}
         src={VIDEO_URL}
         autoPlay

@@ -23,17 +23,32 @@ export default function CourseCard({ course, index }: { course: CourseSummary; i
 
   const transform = useMotionTemplate`perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${lift}px)`;
 
+  const pendingPointer = useRef<{ x: number; y: number } | null>(null);
+  const rafId = useRef<number | null>(null);
+
   function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
-    const el = ref.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const px = (event.clientX - rect.left) / rect.width - 0.5;
-    const py = (event.clientY - rect.top) / rect.height - 0.5;
-    rotateY.set(px * 10);
-    rotateX.set(py * -10);
+    pendingPointer.current = { x: event.clientX, y: event.clientY };
+    if (rafId.current !== null) return;
+    // Batch into rAF: getBoundingClientRect() forces a synchronous layout,
+    // and pointermove can fire far faster than the display refreshes.
+    rafId.current = requestAnimationFrame(() => {
+      rafId.current = null;
+      const el = ref.current;
+      const pointer = pendingPointer.current;
+      if (!el || !pointer) return;
+      const rect = el.getBoundingClientRect();
+      const px = (pointer.x - rect.left) / rect.width - 0.5;
+      const py = (pointer.y - rect.top) / rect.height - 0.5;
+      rotateY.set(px * 10);
+      rotateX.set(py * -10);
+    });
   }
 
   function handlePointerLeave() {
+    if (rafId.current !== null) {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = null;
+    }
     rotateX.set(0);
     rotateY.set(0);
     lift.set(0);

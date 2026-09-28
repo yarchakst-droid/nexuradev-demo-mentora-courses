@@ -11,6 +11,11 @@
   /* Deeper and darker than before, reaching near-black sooner — reads as a
      backdrop that recedes into distance rather than a nearby wall of color. */
   background: linear-gradient(180deg, #002b42 0%, #031222 30%, #02060d 70%, #010409 100%);
+  /* This section stacks several full-height gradient/mask layers (stars,
+     vignette, glow) behind real content — give it its own compositor layer
+     so scrolling doesn't repaint it together with the rest of the page. */
+  contain: paint;
+  will-change: transform;
 }
 
 .glow {

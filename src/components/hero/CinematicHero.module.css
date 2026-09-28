@@ -13,6 +13,11 @@
   overflow: hidden;
   background: var(--hero-bg);
   color: var(--hero-fg);
+  /* Isolate this section's paint into its own compositor layer so scrolling
+     it (and the video inside it) off-screen doesn't force the browser to
+     repaint it together with the rest of the page. */
+  contain: paint;
+  will-change: transform;
 }
 
 .bgVideo {
