@@ -652,6 +652,858 @@ export const courses: Course[] = [
       },
     ],
   },
+  {
+    id: "python-basics",
+    slug: "python-basics",
+    title: tt("Python для початківців", "Python for Beginners", "Python для начинающих"),
+    category: "programming",
+    level: "beginner",
+    cover: cover("1526379095098-d400fd0bf935"),
+    shortDescription: tt(
+      "Перша мова програмування без страху - від синтаксису до першого власного скрипта.",
+      "Your first programming language without the fear factor - from syntax to your first working script.",
+      "Первый язык программирования без страха - от синтаксиса до первого собственного скрипта.",
+    ),
+    description: tt(
+      "Курс для тих, хто ще жодного разу не писав код. Розбираємо Python з нуля: змінні, цикли, функції, робота з файлами - і одразу застосовуємо це в маленьких, але реальних задачах, а не в відірваних від життя вправах.",
+      "A course for people who have never written code before. We cover Python from zero: variables, loops, functions, working with files - and apply it right away in small but real tasks instead of exercises disconnected from real life.",
+      "Курс для тех, кто ещё ни разу не писал код. Разбираем Python с нуля: переменные, циклы, функции, работа с файлами - и сразу применяем это в маленьких, но реальных задачах, а не в оторванных от жизни упражнениях.",
+    ),
+    price: 2400,
+    rating: 4.8,
+    studentsCount: 5680,
+    instructor: {
+      name: "Максим Ковальов",
+      title: tt("Python Developer", "Python Developer", "Python Developer"),
+      avatar: avatar("1607990281513-2c110a25bd8c"),
+      bio: tt(
+        "Пише на Python 6 років, автоматизує процеси для e-commerce компаній. Навчає так, як хотів би, щоб навчали його самого.",
+        "Has been writing Python for 6 years, automating processes for e-commerce companies. Teaches the way he wishes he'd been taught.",
+        "Пишет на Python 6 лет, автоматизирует процессы для e-commerce компаний. Учит так, как хотел бы, чтобы учили его самого.",
+      ),
+      studentsCount: 9200,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Основи синтаксису", "Syntax Basics", "Основы синтаксиса"),
+        lessons: [
+          { id: "l1", title: tt("Змінні, типи даних і оператори", "Variables, data types, and operators", "Переменные, типы данных и операторы"), durationMin: 16 },
+          { id: "l2", title: tt("Умови та розгалуження", "Conditionals and branching", "Условия и ветвление"), durationMin: 14 },
+          { id: "l3", title: tt("Цикли for і while", "for and while loops", "Циклы for и while"), durationMin: 17 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Структури даних", "Data Structures", "Структуры данных"),
+        lessons: [
+          { id: "l4", title: tt("Списки та кортежі", "Lists and tuples", "Списки и кортежи"), durationMin: 15 },
+          { id: "l5", title: tt("Словники: коли і навіщо", "Dictionaries: when and why", "Словари: когда и зачем"), durationMin: 16 },
+          { id: "l6", title: tt("Робота з рядками", "Working with strings", "Работа со строками"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Функції та модулі", "Functions and Modules", "Функции и модули"),
+        lessons: [
+          { id: "l7", title: tt("Пишемо власні функції", "Writing your own functions", "Пишем свои функции"), durationMin: 18 },
+          { id: "l8", title: tt("Імпорт бібліотек стандартної бібліотеки", "Importing from the standard library", "Импорт из стандартной библиотеки"), durationMin: 12 },
+          { id: "l9", title: tt("Обробка помилок try/except", "Handling errors with try/except", "Обработка ошибок try/except"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Перший реальний проєкт", "Your First Real Project", "Первый реальный проект"),
+        lessons: [
+          { id: "l10", title: tt("Читання та запис файлів", "Reading and writing files", "Чтение и запись файлов"), durationMin: 15 },
+          { id: "l11", title: tt("Скрипт автоматизації: від ідеї до коду", "An automation script: from idea to code", "Скрипт автоматизации: от идеи до кода"), durationMin: 20 },
+          { id: "l12", title: tt("Куди рухатись далі", "Where to go from here", "Куда двигаться дальше"), durationMin: 10 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "flutter-mobile-dev",
+    slug: "flutter-mobile-dev",
+    title: tt("Мобільна розробка на Flutter", "Mobile Development with Flutter", "Мобильная разработка на Flutter"),
+    category: "programming",
+    level: "intermediate",
+    cover: cover("1551650975-87deedd944c3"),
+    shortDescription: tt(
+      "Один код - iOS і Android. Збираємо застосунок з навігацією, станом і реальним API.",
+      "One codebase - iOS and Android. We build an app with navigation, state, and a real API.",
+      "Один код - iOS и Android. Собираем приложение с навигацией, состоянием и реальным API.",
+    ),
+    description: tt(
+      "Курс для розробників, які хочуть зайти в мобільну розробку через Flutter. Розберемо widget-дерево, керування станом, навігацію між екранами та підключення до бекенду - і зберемо разом застосунок, який реально можна поставити на телефон.",
+      "A course for developers who want to break into mobile development through Flutter. We'll cover the widget tree, state management, screen navigation, and backend integration - and build an app you can actually install on your phone.",
+      "Курс для разработчиков, которые хотят зайти в мобильную разработку через Flutter. Разберём widget-дерево, управление состоянием, навигацию между экранами и подключение к бэкенду - и соберём приложение, которое реально можно поставить на телефон.",
+    ),
+    price: 3200,
+    rating: 4.7,
+    studentsCount: 2340,
+    instructor: {
+      name: "Анна Сидоренко",
+      title: tt("Senior Mobile Developer", "Senior Mobile Developer", "Senior Mobile Developer"),
+      avatar: avatar("1544005313-94ddf0286df2"),
+      bio: tt(
+        "5 років у мобільній розробці, з них 3 - на Flutter. Випустила у продакшн 7 застосунків, два з яких досі в топі своєї категорії.",
+        "5 years in mobile development, 3 of them on Flutter. Shipped 7 apps to production, two of which are still top-ranked in their category.",
+        "5 лет в мобильной разработке, из них 3 - на Flutter. Выпустила в продакшн 7 приложений, два из которых до сих пор в топе своей категории.",
+      ),
+      studentsCount: 6100,
+      coursesCount: 1,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Основи Flutter і Dart", "Flutter and Dart Fundamentals", "Основы Flutter и Dart"),
+        lessons: [
+          { id: "l1", title: tt("Dart для тих, хто знає JS чи Java", "Dart for those who know JS or Java", "Dart для тех, кто знает JS или Java"), durationMin: 17 },
+          { id: "l2", title: tt("Widget-дерево і як воно рендериться", "The widget tree and how it renders", "Widget-дерево и как оно рендерится"), durationMin: 19 },
+          { id: "l3", title: tt("Stateless проти Stateful віджетів", "Stateless vs Stateful widgets", "Stateless против Stateful виджетов"), durationMin: 15 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Макет і навігація", "Layout and Navigation", "Макет и навигация"),
+        lessons: [
+          { id: "l4", title: tt("Row, Column і адаптивні макети", "Row, Column, and responsive layouts", "Row, Column и адаптивные макеты"), durationMin: 18 },
+          { id: "l5", title: tt("Навігація між екранами", "Navigating between screens", "Навигация между экранами"), durationMin: 16 },
+          { id: "l6", title: tt("Кастомні теми і стилі", "Custom themes and styles", "Кастомные темы и стили"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Керування станом", "State Management", "Управление состоянием"),
+        lessons: [
+          { id: "l7", title: tt("Provider: перший крок у керуванні станом", "Provider: your first step into state management", "Provider: первый шаг в управлении состоянием"), durationMin: 20 },
+          { id: "l8", title: tt("Робота з формами і валідацією", "Forms and validation", "Работа с формами и валидацией"), durationMin: 15 },
+          { id: "l9", title: tt("Локальне збереження даних", "Local data persistence", "Локальное сохранение данных"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("API та реліз у продакшн", "API and Shipping to Production", "API и релиз в продакшн"),
+        lessons: [
+          { id: "l10", title: tt("Підключення до REST API", "Connecting to a REST API", "Подключение к REST API"), durationMin: 19 },
+          { id: "l11", title: tt("Обробка помилок мережі", "Handling network errors", "Обработка сетевых ошибок"), durationMin: 13 },
+          { id: "l12", title: tt("Збірка релізу для iOS і Android", "Building a release for iOS and Android", "Сборка релиза для iOS и Android"), durationMin: 16 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "motion-design-animation",
+    slug: "motion-design-animation",
+    title: tt("Motion-дизайн та анімація", "Motion Design and Animation", "Motion-дизайн и анимация"),
+    category: "design",
+    level: "intermediate",
+    cover: cover("1618172193622-ae2d025f4032"),
+    shortDescription: tt(
+      "Оживляємо статичний дизайн: принципи руху, таймінг і власні анімовані ролики.",
+      "Bringing static design to life: motion principles, timing, and your own animated clips.",
+      "Оживляем статичный дизайн: принципы движения, тайминг и собственные анимированные ролики.",
+    ),
+    description: tt(
+      "Курс про те, як дизайн починає рухатись. Розберемо 12 принципів анімації, таймінг, easing і композицію в After Effects - і зберемо портфоліо з коротких анімованих роликів для соцмереж, реклами й інтерфейсів.",
+      "A course about design that moves. We'll cover the 12 principles of animation, timing, easing, and composition in After Effects - and build a portfolio of short animated clips for social media, ads, and interfaces.",
+      "Курс о том, как дизайн начинает двигаться. Разберём 12 принципов анимации, тайминг, easing и композицию в After Effects - и соберём портфолио из коротких анимированных роликов для соцсетей, рекламы и интерфейсов.",
+    ),
+    price: 2800,
+    rating: 4.9,
+    studentsCount: 1870,
+    instructor: {
+      name: "Данило Штепа",
+      title: tt("Motion Designer", "Motion Designer", "Motion Designer"),
+      avatar: avatar("1519345182560-3f2917c472ef"),
+      bio: tt(
+        "Робив анімацію для брендів і музичних кліпів 7 років. Вважає, що гарна анімація - це фізика, а не набір ефектів.",
+        "Has been animating for brands and music videos for 7 years. Believes good animation is physics, not a stack of effects.",
+        "Делал анимацию для брендов и музыкальных клипов 7 лет. Считает, что хорошая анимация - это физика, а не набор эффектов.",
+      ),
+      studentsCount: 3400,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Принципи руху", "Principles of Motion", "Принципы движения"),
+        lessons: [
+          { id: "l1", title: tt("12 принципів анімації на практиці", "The 12 principles of animation in practice", "12 принципов анимации на практике"), durationMin: 20 },
+          { id: "l2", title: tt("Таймінг і easing", "Timing and easing", "Тайминг и easing"), durationMin: 16 },
+          { id: "l3", title: tt("Кривi швидкості в After Effects", "Speed graphs in After Effects", "Кривые скорости в After Effects"), durationMin: 18 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Інструменти After Effects", "After Effects Tooling", "Инструменты After Effects"),
+        lessons: [
+          { id: "l4", title: tt("Композиції, шари і прекомпози", "Compositions, layers, and precomps", "Композиции, слои и прекомпозы"), durationMin: 17 },
+          { id: "l5", title: tt("Маски і трек-мати", "Masks and track mattes", "Маски и трек-матты"), durationMin: 15 },
+          { id: "l6", title: tt("Експресії без страху", "Expressions without the fear", "Экспрешны без страха"), durationMin: 19 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Анімація UI та тексту", "UI and Text Animation", "Анимация UI и текста"),
+        lessons: [
+          { id: "l7", title: tt("Мікроанімації для інтерфейсів", "Micro-animations for interfaces", "Микроанимации для интерфейсов"), durationMin: 16 },
+          { id: "l8", title: tt("Кінетична типографіка", "Kinetic typography", "Кинетическая типографика"), durationMin: 18 },
+          { id: "l9", title: tt("Анімація логотипу", "Logo animation", "Анимация логотипа"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Портфоліо й рендер", "Portfolio and Rendering", "Портфолио и рендер"),
+        lessons: [
+          { id: "l10", title: tt("Звук і синхронізація з рухом", "Sound and syncing to motion", "Звук и синхронизация с движением"), durationMin: 15 },
+          { id: "l11", title: tt("Налаштування рендеру під соцмережі", "Render settings for social media", "Настройка рендера под соцсети"), durationMin: 12 },
+          { id: "l12", title: tt("Збираємо шоуріл", "Building a showreel", "Собираем шоурил"), durationMin: 17 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "web-design-figma",
+    slug: "web-design-figma",
+    title: tt("Веб-дизайн у Figma", "Web Design in Figma", "Веб-дизайн в Figma"),
+    category: "design",
+    level: "beginner",
+    cover: cover("1586717791821-3f44a563fa4c"),
+    shortDescription: tt(
+      "Від вайрфрейму до клікабельного прототипу - весь процес веб-дизайну в одному інструменті.",
+      "From wireframe to clickable prototype - the whole web design process in one tool.",
+      "От вайрфрейма до кликабельного прототипа - весь процесс веб-дизайна в одном инструменте.",
+    ),
+    description: tt(
+      "Курс для тих, хто хоче навчитись проєктувати сайти, а не просто клацати в Figma. Пройдемо весь шлях: дослідження, вайрфрейми, сітки, компоненти, авто-лейаут і прототипування - і зберемо сайт, готовий до передачі розробнику.",
+      "A course for those who want to learn to design websites, not just click around in Figma. We'll go through the whole path: research, wireframes, grids, components, auto-layout, and prototyping - and build a site ready to hand off to a developer.",
+      "Курс для тех, кто хочет научиться проектировать сайты, а не просто кликать в Figma. Пройдём весь путь: исследование, вайрфреймы, сетки, компоненты, авто-лейаут и прототипирование - и соберём сайт, готовый к передаче разработчику.",
+    ),
+    price: 2300,
+    rating: 4.8,
+    studentsCount: 3920,
+    instructor: {
+      name: "Христина Романюк",
+      title: tt("Product Designer", "Product Designer", "Product Designer"),
+      avatar: avatar("1544725176-7c40e5a71c5e"),
+      bio: tt(
+        "4 роки проєктує вебсайти й продукти для стартапів. Любить Figma настільки, що веде про неї блог у вільний час.",
+        "Has been designing websites and products for startups for 4 years. Loves Figma enough to blog about it in her free time.",
+        "4 года проектирует вебсайты и продукты для стартапов. Любит Figma настолько, что ведёт о ней блог в свободное время.",
+      ),
+      studentsCount: 5800,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Дослідження і структура", "Research and Structure", "Исследование и структура"),
+        lessons: [
+          { id: "l1", title: tt("Аналіз конкурентів і референсів", "Competitor and reference analysis", "Анализ конкурентов и референсов"), durationMin: 15 },
+          { id: "l2", title: tt("Інформаційна архітектура сайту", "Website information architecture", "Информационная архитектура сайта"), durationMin: 17 },
+          { id: "l3", title: tt("Вайрфрейми низької точності", "Low-fidelity wireframes", "Вайрфреймы низкой точности"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Сітки та компоненти", "Grids and Components", "Сетки и компоненты"),
+        lessons: [
+          { id: "l4", title: tt("Сітки та відступи в Figma", "Grids and spacing in Figma", "Сетки и отступы в Figma"), durationMin: 16 },
+          { id: "l5", title: tt("Компоненти й варіанти", "Components and variants", "Компоненты и варианты"), durationMin: 19 },
+          { id: "l6", title: tt("Авто-лейаут без болю", "Auto-layout without pain", "Авто-лейаут без боли"), durationMin: 18 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Візуальний дизайн", "Visual Design", "Визуальный дизайн"),
+        lessons: [
+          { id: "l7", title: tt("Типографіка для вебу", "Typography for the web", "Типографика для веба"), durationMin: 15 },
+          { id: "l8", title: tt("Кольір і контраст", "Color and contrast", "Цвет и контраст"), durationMin: 13 },
+          { id: "l9", title: tt("Ілюстрації й іконки", "Illustrations and icons", "Иллюстрации и иконки"), durationMin: 12 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Прототип і передача розробнику", "Prototype and Developer Handoff", "Прототип и передача разработчику"),
+        lessons: [
+          { id: "l10", title: tt("Клікабельний прототип", "Clickable prototype", "Кликабельный прототип"), durationMin: 17 },
+          { id: "l11", title: tt("Адаптивність під мобільні екрани", "Responsiveness for mobile screens", "Адаптивность под мобильные экраны"), durationMin: 16 },
+          { id: "l12", title: tt("Специфікації для розробника", "Developer specs", "Спецификации для разработчика"), durationMin: 11 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "sql-databases",
+    slug: "sql-databases",
+    title: tt("SQL та бази даних", "SQL and Databases", "SQL и базы данных"),
+    category: "data",
+    level: "beginner",
+    cover: cover("1544197150-b99a580bb7a8"),
+    shortDescription: tt(
+      "Запити, які реально працюють на реальних даних - від SELECT до складних JOIN.",
+      "Queries that actually work on real data - from SELECT to complex JOINs.",
+      "Запросы, которые реально работают на реальных данных - от SELECT до сложных JOIN.",
+    ),
+    description: tt(
+      "Курс для тих, хто хоче впевнено читати й писати SQL. Розберемо реляційну модель, проєктування таблиць, JOIN-и всіх видів, індекси й оптимізацію - на реальній базі даних, а не на трьох рядках з підручника.",
+      "A course for those who want to confidently read and write SQL. We'll cover the relational model, table design, every kind of JOIN, indexes, and optimization - on a real database, not three rows from a textbook.",
+      "Курс для тех, кто хочет уверенно читать и писать SQL. Разберём реляционную модель, проектирование таблиц, JOIN-ы всех видов, индексы и оптимизацию - на реальной базе данных, а не на трёх строчках из учебника.",
+    ),
+    price: 2100,
+    rating: 4.7,
+    studentsCount: 4560,
+    instructor: {
+      name: "Роман Ткаченко",
+      title: tt("Database Architect", "Database Architect", "Database Architect"),
+      avatar: avatar("1552058544-f2b08422138a"),
+      bio: tt(
+        "10 років проєктує бази даних для фінтех-продуктів. Бачив достатньо повільних запитів, щоб знати, чому індекси - не магія.",
+        "Has been designing databases for fintech products for 10 years. Has seen enough slow queries to know indexes aren't magic.",
+        "10 лет проектирует базы данных для финтех-продуктов. Видел достаточно медленных запросов, чтобы знать, почему индексы - не магия.",
+      ),
+      studentsCount: 8700,
+      coursesCount: 3,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Реляційна модель", "The Relational Model", "Реляционная модель"),
+        lessons: [
+          { id: "l1", title: tt("Таблиці, рядки і типи даних", "Tables, rows, and data types", "Таблицы, строки и типы данных"), durationMin: 14 },
+          { id: "l2", title: tt("Первинні та зовнішні ключі", "Primary and foreign keys", "Первичные и внешние ключи"), durationMin: 15 },
+          { id: "l3", title: tt("Нормалізація без зайвої теорії", "Normalization without the extra theory", "Нормализация без лишней теории"), durationMin: 17 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Запити SELECT", "SELECT Queries", "Запросы SELECT"),
+        lessons: [
+          { id: "l4", title: tt("SELECT, WHERE і сортування", "SELECT, WHERE, and sorting", "SELECT, WHERE и сортировка"), durationMin: 16 },
+          { id: "l5", title: tt("Агрегатні функції та GROUP BY", "Aggregate functions and GROUP BY", "Агрегатные функции и GROUP BY"), durationMin: 18 },
+          { id: "l6", title: tt("Підзапити", "Subqueries", "Подзапросы"), durationMin: 15 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("JOIN-и та зв'язки", "JOINs and Relationships", "JOIN-ы и связи"),
+        lessons: [
+          { id: "l7", title: tt("INNER, LEFT і RIGHT JOIN", "INNER, LEFT, and RIGHT JOIN", "INNER, LEFT и RIGHT JOIN"), durationMin: 19 },
+          { id: "l8", title: tt("Зв'язки многие-до-многих", "Many-to-many relationships", "Связи многие-ко-многим"), durationMin: 16 },
+          { id: "l9", title: tt("Часті помилки в JOIN-ах", "Common JOIN mistakes", "Частые ошибки в JOIN-ах"), durationMin: 12 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Продуктивність", "Performance", "Производительность"),
+        lessons: [
+          { id: "l10", title: tt("Як працюють індекси", "How indexes work", "Как работают индексы"), durationMin: 17 },
+          { id: "l11", title: tt("Читаємо план виконання запиту", "Reading a query execution plan", "Читаем план выполнения запроса"), durationMin: 18 },
+          { id: "l12", title: tt("Транзакції та цілісність даних", "Transactions and data integrity", "Транзакции и целостность данных"), durationMin: 14 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "machine-learning-basics",
+    slug: "machine-learning-basics",
+    title: tt("Machine Learning з нуля", "Machine Learning from Scratch", "Machine Learning с нуля"),
+    category: "data",
+    level: "intermediate",
+    cover: cover("1504639725590-34d0984388bd"),
+    shortDescription: tt(
+      "Як насправді працюють моделі, які всі обговорюють - без магії, з математикою в розумних дозах.",
+      "How the models everyone talks about actually work - no magic, math in reasonable doses.",
+      "Как на самом деле работают модели, которые все обсуждают - без магии, с математикой в разумных дозах.",
+    ),
+    description: tt(
+      "Курс для тих, хто знає Python і хоче зрозуміти, що відбувається всередині ML-моделей. Розберемо регресію, класифікацію, дерева рішень і базові нейромережі - і навчимо модель на реальному датасеті від початку до кінця.",
+      "A course for those who know Python and want to understand what happens inside ML models. We'll cover regression, classification, decision trees, and basic neural networks - and train a model on a real dataset from start to finish.",
+      "Курс для тех, кто знает Python и хочет понять, что происходит внутри ML-моделей. Разберём регрессию, классификацию, деревья решений и базовые нейросети - и обучим модель на реальном датасете от начала до конца.",
+    ),
+    price: 3400,
+    rating: 4.6,
+    studentsCount: 2980,
+    instructor: {
+      name: "Вікторія Дяченко",
+      title: tt("ML Engineer", "ML Engineer", "ML Engineer"),
+      avatar: avatar("1534528741775-53994a69daeb"),
+      bio: tt(
+        "Будує ML-пайплайни для рекомендаційних систем вже 5 років. Пояснює складні речі так, щоб їх можна було переказати другові.",
+        "Has been building ML pipelines for recommendation systems for 5 years. Explains complex things so you could retell them to a friend.",
+        "Строит ML-пайплайны для рекомендательных систем уже 5 лет. Объясняет сложные вещи так, чтобы их можно было пересказать другу.",
+      ),
+      studentsCount: 4100,
+      coursesCount: 1,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Основи машинного навчання", "Machine Learning Fundamentals", "Основы машинного обучения"),
+        lessons: [
+          { id: "l1", title: tt("Навчання з учителем проти без учителя", "Supervised vs unsupervised learning", "Обучение с учителем против без учителя"), durationMin: 16 },
+          { id: "l2", title: tt("Підготовка й очищення даних", "Data preparation and cleaning", "Подготовка и очистка данных"), durationMin: 19 },
+          { id: "l3", title: tt("Train/test split і чому це важливо", "Train/test split and why it matters", "Train/test split и почему это важно"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Регресія та класифікація", "Regression and Classification", "Регрессия и классификация"),
+        lessons: [
+          { id: "l4", title: tt("Лінійна регресія на практиці", "Linear regression in practice", "Линейная регрессия на практике"), durationMin: 18 },
+          { id: "l5", title: tt("Логістична регресія для класифікації", "Logistic regression for classification", "Логистическая регрессия для классификации"), durationMin: 17 },
+          { id: "l6", title: tt("Дерева рішень і random forest", "Decision trees and random forest", "Деревья решений и random forest"), durationMin: 20 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Оцінка моделей", "Model Evaluation", "Оценка моделей"),
+        lessons: [
+          { id: "l7", title: tt("Метрики: точність, precision, recall", "Metrics: accuracy, precision, recall", "Метрики: точность, precision, recall"), durationMin: 16 },
+          { id: "l8", title: tt("Перенавчання і як з ним боротись", "Overfitting and how to fight it", "Переобучение и как с ним бороться"), durationMin: 15 },
+          { id: "l9", title: tt("Крос-валідація", "Cross-validation", "Кросс-валидация"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Нейромережі: перший погляд", "Neural Networks: A First Look", "Нейросети: первый взгляд"),
+        lessons: [
+          { id: "l10", title: tt("Як влаштований перцептрон", "How a perceptron works", "Как устроен перцептрон"), durationMin: 17 },
+          { id: "l11", title: tt("Проста мережа на Keras", "A simple network in Keras", "Простая сеть на Keras"), durationMin: 22 },
+          { id: "l12", title: tt("Куди рухатись у ML далі", "Where to go next in ML", "Куда двигаться в ML дальше"), durationMin: 11 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "meta-ads-targeting",
+    slug: "meta-ads-targeting",
+    title: tt("Таргетована реклама в Meta", "Targeted Ads on Meta", "Таргетированная реклама в Meta"),
+    category: "marketing",
+    level: "beginner",
+    cover: cover("1611926653458-09294b3142bf"),
+    shortDescription: tt(
+      "Запускаємо рекламу в Instagram і Facebook так, щоб вона окуповувалась, а не зливала бюджет.",
+      "Launching Instagram and Facebook ads that pay for themselves instead of burning your budget.",
+      "Запускаем рекламу в Instagram и Facebook так, чтобы она окупалась, а не сливала бюджет.",
+    ),
+    description: tt(
+      "Курс для тих, хто хоче запускати рекламу самостійно, а не здогадуватись. Розберемо Ads Manager, структуру кампаній, аудиторії, креативи й аналітику - і запустимо реальну кампанію з відстеженням результату.",
+      "A course for those who want to run ads themselves instead of guessing. We'll cover Ads Manager, campaign structure, audiences, creatives, and analytics - and launch a real campaign with tracked results.",
+      "Курс для тех, кто хочет запускать рекламу самостоятельно, а не гадать. Разберём Ads Manager, структуру кампаний, аудитории, креативы и аналитику - и запустим реальную кампанию с отслеживанием результата.",
+    ),
+    price: 2200,
+    rating: 4.7,
+    studentsCount: 3150,
+    instructor: {
+      name: "Олена Кравець",
+      title: tt("Performance Marketing Lead", "Performance Marketing Lead", "Performance Marketing Lead"),
+      avatar: avatar("1489424731084-a5d8b219a5bb"),
+      bio: tt(
+        "Веде платну рекламу для брендів електронної комерції 6 років. Любить цифри більше, ніж креативи - бо цифри не брешуть.",
+        "Has been running paid ads for e-commerce brands for 6 years. Likes numbers more than creatives - because numbers don't lie.",
+        "Ведёт платную рекламу для брендов электронной коммерции 6 лет. Любит цифры больше, чем креативы - потому что цифры не врут.",
+      ),
+      studentsCount: 5200,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Основи Ads Manager", "Ads Manager Basics", "Основы Ads Manager"),
+        lessons: [
+          { id: "l1", title: tt("Структура кампанія-група-оголошення", "Campaign-adset-ad structure", "Структура кампания-группа-объявление"), durationMin: 15 },
+          { id: "l2", title: tt("Піксель і подія конверсії", "The pixel and conversion events", "Пиксель и событие конверсии"), durationMin: 17 },
+          { id: "l3", title: tt("Цілі кампанії: що обрати", "Campaign objectives: what to choose", "Цели кампании: что выбрать"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Аудиторії", "Audiences", "Аудитории"),
+        lessons: [
+          { id: "l4", title: tt("Аудиторії за інтересами й поведінкою", "Interest and behavior audiences", "Аудитории по интересам и поведению"), durationMin: 16 },
+          { id: "l5", title: tt("Ремаркетинг: повертаємо тих, хто пішов", "Remarketing: bringing back who left", "Ремаркетинг: возвращаем тех, кто ушёл"), durationMin: 15 },
+          { id: "l6", title: tt("Look-alike аудиторії", "Look-alike audiences", "Look-alike аудитории"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Креативи, що працюють", "Creatives That Work", "Креативы, которые работают"),
+        lessons: [
+          { id: "l7", title: tt("Формати оголошень і коли який обирати", "Ad formats and when to use each", "Форматы объявлений и когда какой выбирать"), durationMin: 16 },
+          { id: "l8", title: tt("Тексти, що продають без крику", "Copy that sells without shouting", "Тексты, которые продают без крика"), durationMin: 14 },
+          { id: "l9", title: tt("A/B тестування креативів", "A/B testing creatives", "A/B тестирование креативов"), durationMin: 17 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Бюджет і аналітика", "Budget and Analytics", "Бюджет и аналитика"),
+        lessons: [
+          { id: "l10", title: tt("Розподіл бюджету між кампаніями", "Allocating budget across campaigns", "Распределение бюджета между кампаниями"), durationMin: 15 },
+          { id: "l11", title: tt("Читаємо звіти: CTR, CPA, ROAS", "Reading reports: CTR, CPA, ROAS", "Читаем отчёты: CTR, CPA, ROAS"), durationMin: 18 },
+          { id: "l12", title: tt("Коли зупиняти кампанію", "When to pause a campaign", "Когда останавливать кампанию"), durationMin: 12 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "seo-website-promotion",
+    slug: "seo-website-promotion",
+    title: tt("SEO-просування сайтів", "SEO for Websites", "SEO-продвижение сайтов"),
+    category: "marketing",
+    level: "intermediate",
+    cover: cover("1526628953301-3e589a6a8b74"),
+    shortDescription: tt(
+      "Органічний трафік без вигаданих хаків - технічне SEO, контент і посилання по-справжньому.",
+      "Organic traffic without made-up hacks - technical SEO, content, and links done properly.",
+      "Органический трафик без выдуманных хаков - техническое SEO, контент и ссылки по-настоящему.",
+    ),
+    description: tt(
+      "Курс для власників сайтів і маркетологів, які втомились від суперечливих порад про SEO. Розберемо технічний аудит, семантичне ядро, оптимізацію контенту й посилальний профіль - на прикладі реального сайту, а не абстракцій.",
+      "A course for website owners and marketers tired of contradictory SEO advice. We'll cover technical audits, keyword research, content optimization, and link profiles - using a real site, not abstractions.",
+      "Курс для владельцев сайтов и маркетологов, уставших от противоречивых советов по SEO. Разберём технический аудит, семантическое ядро, оптимизацию контента и ссылочный профиль - на примере реального сайта, а не абстракций.",
+    ),
+    price: 2600,
+    rating: 4.8,
+    studentsCount: 2710,
+    instructor: {
+      name: "Богдан Місюра",
+      title: tt("SEO Consultant", "SEO Consultant", "SEO Consultant"),
+      avatar: avatar("1506794778202-cad84cf45f1d"),
+      bio: tt(
+        "Виводив сайти в топ Google 8 років - від локального бізнесу до великих e-commerce каталогів.",
+        "Has been getting sites to the top of Google for 8 years - from local businesses to large e-commerce catalogs.",
+        "Выводил сайты в топ Google 8 лет - от локального бизнеса до крупных e-commerce каталогов.",
+      ),
+      studentsCount: 4700,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Технічне SEO", "Technical SEO", "Техническое SEO"),
+        lessons: [
+          { id: "l1", title: tt("Як пошукові боти бачать сайт", "How search bots see your site", "Как поисковые боты видят сайт"), durationMin: 16 },
+          { id: "l2", title: tt("Швидкість завантаження і Core Web Vitals", "Load speed and Core Web Vitals", "Скорость загрузки и Core Web Vitals"), durationMin: 18 },
+          { id: "l3", title: tt("Структура URL і sitemap", "URL structure and sitemap", "Структура URL и sitemap"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Семантика й ключові слова", "Keywords and Search Intent", "Семантика и ключевые слова"),
+        lessons: [
+          { id: "l4", title: tt("Збір семантичного ядра", "Building a keyword list", "Сбор семантического ядра"), durationMin: 17 },
+          { id: "l5", title: tt("Пошуковий намір: що насправді шукають", "Search intent: what people actually want", "Поисковое намерение: что реально ищут"), durationMin: 15 },
+          { id: "l6", title: tt("Кластеризація сторінок під запити", "Clustering pages around queries", "Кластеризация страниц под запросы"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Оптимізація контенту", "Content Optimization", "Оптимизация контента"),
+        lessons: [
+          { id: "l7", title: tt("Title, description і заголовки", "Titles, descriptions, and headings", "Title, description и заголовки"), durationMin: 14 },
+          { id: "l8", title: tt("Внутрішня перелінковка", "Internal linking", "Внутренняя перелинковка"), durationMin: 15 },
+          { id: "l9", title: tt("E-E-A-T: чому Google довіряє сайту", "E-E-A-T: why Google trusts a site", "E-E-A-T: почему Google доверяет сайту"), durationMin: 16 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Посилання та вимірювання", "Links and Measurement", "Ссылки и измерение"),
+        lessons: [
+          { id: "l10", title: tt("Природний посилальний профіль", "A natural link profile", "Естественный ссылочный профиль"), durationMin: 17 },
+          { id: "l11", title: tt("Search Console: читаємо реальні дані", "Search Console: reading real data", "Search Console: читаем реальные данные"), durationMin: 18 },
+          { id: "l12", title: tt("Звіт про прогрес для клієнта", "A progress report for the client", "Отчёт о прогрессе для клиента"), durationMin: 12 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "business-english",
+    slug: "business-english",
+    title: tt("Ділова англійська", "Business English", "Деловой английский"),
+    category: "language",
+    level: "intermediate",
+    cover: cover("1434030216411-0b793f4b4173"),
+    shortDescription: tt(
+      "Впевнено вести перемовини, писати листи й виступати англійською в робочому середовищі.",
+      "Confidently negotiate, write emails, and present in English at work.",
+      "Уверенно вести переговоры, писать письма и выступать по-английски в рабочей среде.",
+    ),
+    description: tt(
+      "Курс для тих, хто вже говорить англійською, але губиться в діловому контексті. Розберемо перемовини, ділове листування, презентації та small talk - через реальні робочі ситуації, а не абстрактну граматику.",
+      "A course for those who already speak English but get lost in a business context. We'll cover negotiations, business correspondence, presentations, and small talk - through real work situations, not abstract grammar.",
+      "Курс для тех, кто уже говорит по-английски, но теряется в деловом контексте. Разберём переговоры, деловую переписку, презентации и small talk - через реальные рабочие ситуации, а не абстрактную грамматику.",
+    ),
+    price: 2500,
+    rating: 4.9,
+    studentsCount: 4320,
+    instructor: {
+      name: "Артем Поліщук",
+      title: tt("Business English Coach", "Business English Coach", "Business English Coach"),
+      avatar: avatar("1507003211169-0a1dd7228f2d"),
+      bio: tt(
+        "Викладає ділову англійську для команд і топменеджменту 9 років. Раніше сам вів перемовини з іноземними партнерами - знає, де саме губляться слова.",
+        "Has been teaching business English to teams and executives for 9 years. Used to negotiate with foreign partners himself - knows exactly where the words get lost.",
+        "Преподаёт деловой английский для команд и топ-менеджмента 9 лет. Раньше сам вёл переговоры с иностранными партнёрами - знает, где именно теряются слова.",
+      ),
+      studentsCount: 7300,
+      coursesCount: 3,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Ділове листування", "Business Correspondence", "Деловая переписка"),
+        lessons: [
+          { id: "l1", title: tt("Структура ділового листа", "The structure of a business email", "Структура делового письма"), durationMin: 14 },
+          { id: "l2", title: tt("Ввічливі формулювання відмови", "Polite ways to say no", "Вежливые формулировки отказа"), durationMin: 13 },
+          { id: "l3", title: tt("Follow-up листи, які працюють", "Follow-up emails that work", "Follow-up письма, которые работают"), durationMin: 12 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Перемовини", "Negotiations", "Переговоры"),
+        lessons: [
+          { id: "l4", title: tt("Фрази для торгу й компромісу", "Phrases for bargaining and compromise", "Фразы для торга и компромисса"), durationMin: 17 },
+          { id: "l5", title: tt("Як не погодитись ввічливо", "How to disagree politely", "Как не согласиться вежливо"), durationMin: 15 },
+          { id: "l6", title: tt("Закриваємо перемовини домовленістю", "Closing negotiations with an agreement", "Закрываем переговоры договорённостью"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Презентації", "Presentations", "Презентации"),
+        lessons: [
+          { id: "l7", title: tt("Структура сильної презентації", "The structure of a strong presentation", "Структура сильной презентации"), durationMin: 16 },
+          { id: "l8", title: tt("Відповіді на складні запитання", "Answering tough questions", "Ответы на сложные вопросы"), durationMin: 15 },
+          { id: "l9", title: tt("Мова тіла і темп мовлення", "Body language and pacing", "Язык тела и темп речи"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Неформальне спілкування", "Informal Communication", "Неформальное общение"),
+        lessons: [
+          { id: "l10", title: tt("Small talk, який не звучить фальшиво", "Small talk that doesn't sound fake", "Small talk, который не звучит фальшиво"), durationMin: 12 },
+          { id: "l11", title: tt("Нетворкінг англійською", "Networking in English", "Нетворкинг на английском"), durationMin: 14 },
+          { id: "l12", title: tt("Культурні нюанси в спілкуванні", "Cultural nuances in communication", "Культурные нюансы в общении"), durationMin: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "german-basics",
+    slug: "german-basics",
+    title: tt("Німецька для початківців", "German for Beginners", "Немецкий для начинающих"),
+    category: "language",
+    level: "beginner",
+    cover: cover("1546410531-bb4caa6b424d"),
+    shortDescription: tt(
+      "Від нуля до впевненого A2 - говорити, розуміти і не боятись німецької граматики.",
+      "From zero to confident A2 - speaking, understanding, and not fearing German grammar.",
+      "От нуля до уверенного A2 - говорить, понимать и не бояться немецкой грамматики.",
+    ),
+    description: tt(
+      "Курс для тих, хто починає німецьку з нуля - для переїзду, роботи чи навчання. Розберемо базову граматику, побудову речень і живі діалоги для щоденних ситуацій, щоб заговорити якомога швидше, а не лише читати підручник.",
+      "A course for those starting German from zero - for relocation, work, or study. We'll cover basic grammar, sentence structure, and live dialogues for everyday situations, so you start speaking as fast as possible instead of just reading a textbook.",
+      "Курс для тех, кто начинает немецкий с нуля - для переезда, работы или учёбы. Разберём базовую грамматику, построение предложений и живые диалоги для повседневных ситуаций, чтобы заговорить как можно быстрее, а не просто читать учебник.",
+    ),
+    price: 2000,
+    rating: 4.8,
+    studentsCount: 3080,
+    instructor: {
+      name: "Марта Гончарук",
+      title: tt("German Language Teacher", "German Language Teacher", "German Language Teacher"),
+      avatar: avatar("1573496359142-b8d87734a5a2"),
+      bio: tt(
+        "Викладає німецьку 7 років, з них 3 - для студентів, що готуються до переїзду в Німеччину чи Австрію.",
+        "Has been teaching German for 7 years, 3 of them for students preparing to relocate to Germany or Austria.",
+        "Преподаёт немецкий 7 лет, из них 3 - для студентов, готовящихся к переезду в Германию или Австрию.",
+      ),
+      studentsCount: 4900,
+      coursesCount: 1,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Перші кроки", "First Steps", "Первые шаги"),
+        lessons: [
+          { id: "l1", title: tt("Алфавіт і вимова", "Alphabet and pronunciation", "Алфавит и произношение"), durationMin: 13 },
+          { id: "l2", title: tt("Привітання і базові фрази", "Greetings and basic phrases", "Приветствия и базовые фразы"), durationMin: 12 },
+          { id: "l3", title: tt("Артиклі der, die, das", "The articles der, die, das", "Артикли der, die, das"), durationMin: 15 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Базова граматика", "Basic Grammar", "Базовая грамматика"),
+        lessons: [
+          { id: "l4", title: tt("Дієслова теперішнього часу", "Present tense verbs", "Глаголы настоящего времени"), durationMin: 16 },
+          { id: "l5", title: tt("Порядок слів у реченні", "Word order in a sentence", "Порядок слов в предложении"), durationMin: 15 },
+          { id: "l6", title: tt("Заперечення nicht і kein", "Negation with nicht and kein", "Отрицание nicht и kein"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Щоденні ситуації", "Everyday Situations", "Повседневные ситуации"),
+        lessons: [
+          { id: "l7", title: tt("У магазині й на пошті", "At the store and the post office", "В магазине и на почте"), durationMin: 14 },
+          { id: "l8", title: tt("Замовлення в кафе", "Ordering at a café", "Заказ в кафе"), durationMin: 12 },
+          { id: "l9", title: tt("Питання напрямку і транспорт", "Asking for directions and transport", "Вопросы направления и транспорт"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Впевнений A2", "Confident A2", "Уверенный A2"),
+        lessons: [
+          { id: "l10", title: tt("Розповідь про себе й роботу", "Talking about yourself and your job", "Рассказ о себе и работе"), durationMin: 15 },
+          { id: "l11", title: tt("Минулий час Perfekt", "Past tense with Perfekt", "Прошедшее время Perfekt"), durationMin: 17 },
+          { id: "l12", title: tt("Діалоги для реальних ситуацій", "Dialogues for real situations", "Диалоги для реальных ситуаций"), durationMin: 16 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "time-management-focus",
+    slug: "time-management-focus",
+    title: tt("Тайм-менеджмент та фокус", "Time Management and Focus", "Тайм-менеджмент и фокус"),
+    category: "productivity",
+    level: "beginner",
+    cover: cover("1506784983877-45594efa4cbe"),
+    shortDescription: tt(
+      "Керувати часом і увагою так, щоб встигати важливе, а не тільки термінове.",
+      "Manage your time and attention so you get to what matters, not just what's urgent.",
+      "Управлять временем и вниманием так, чтобы успевать важное, а не только срочное.",
+    ),
+    description: tt(
+      "Курс для тих, хто тоне в задачах і сповіщеннях. Розберемо пріоритизацію, боротьбу з прокрастинацією, глибоку роботу й планування тижня - і зберемо особисту систему, яка реально приживається, а не забувається через тиждень.",
+      "A course for those drowning in tasks and notifications. We'll cover prioritization, fighting procrastination, deep work, and weekly planning - and build a personal system that actually sticks instead of being forgotten in a week.",
+      "Курс для тех, кто тонет в задачах и уведомлениях. Разберём приоритизацию, борьбу с прокрастинацией, глубокую работу и планирование недели - и соберём личную систему, которая реально приживается, а не забывается через неделю.",
+    ),
+    price: 1800,
+    rating: 4.6,
+    studentsCount: 5240,
+    instructor: {
+      name: "Сергій Ільєнко",
+      title: tt("Productivity Coach", "Productivity Coach", "Productivity Coach"),
+      avatar: avatar("1560250097-0b93528c311a"),
+      bio: tt(
+        "Консультує керівників з тайм-менеджменту 6 років. Переконаний, що продуктивність - це не більше зусиль, а менше зайвого.",
+        "Has been consulting executives on time management for 6 years. Convinced that productivity isn't about more effort, but less clutter.",
+        "Консультирует руководителей по тайм-менеджменту 6 лет. Убеждён, что продуктивность - это не больше усилий, а меньше лишнего.",
+      ),
+      studentsCount: 6900,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Пріоритизація", "Prioritization", "Приоритизация"),
+        lessons: [
+          { id: "l1", title: tt("Матриця Ейзенхауера на практиці", "The Eisenhower Matrix in practice", "Матрица Эйзенхауэра на практике"), durationMin: 14 },
+          { id: "l2", title: tt("Як казати 'ні' без провини", "How to say no without guilt", "Как говорить 'нет' без вины"), durationMin: 12 },
+          { id: "l3", title: tt("Правило одного головного завдання", "The one main task rule", "Правило одной главной задачи"), durationMin: 11 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Боротьба з прокрастинацією", "Fighting Procrastination", "Борьба с прокрастинацией"),
+        lessons: [
+          { id: "l4", title: tt("Чому ми відкладаємо: справжні причини", "Why we procrastinate: the real reasons", "Почему мы откладываем: настоящие причины"), durationMin: 15 },
+          { id: "l5", title: tt("Правило двох хвилин", "The two-minute rule", "Правило двух минут"), durationMin: 10 },
+          { id: "l6", title: tt("Дроблення великих задач", "Breaking big tasks into pieces", "Дробление больших задач"), durationMin: 13 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Глибока робота", "Deep Work", "Глубокая работа"),
+        lessons: [
+          { id: "l7", title: tt("Що таке глибока робота і навіщо вона", "What deep work is and why it matters", "Что такое глубокая работа и зачем она"), durationMin: 16 },
+          { id: "l8", title: tt("Керування сповіщеннями і відволіканнями", "Managing notifications and distractions", "Управление уведомлениями и отвлечениями"), durationMin: 14 },
+          { id: "l9", title: tt("Техніка Pomodoro без фанатизму", "The Pomodoro technique without fanaticism", "Техника Pomodoro без фанатизма"), durationMin: 12 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Особиста система", "Your Personal System", "Личная система"),
+        lessons: [
+          { id: "l10", title: tt("Планування тижня за 20 хвилин", "Planning your week in 20 minutes", "Планирование недели за 20 минут"), durationMin: 15 },
+          { id: "l11", title: tt("Щотижневий огляд і корекція", "Weekly review and adjustment", "Еженедельный обзор и корректировка"), durationMin: 13 },
+          { id: "l12", title: tt("Як зробити систему звичкою", "Turning a system into a habit", "Как сделать систему привычкой"), durationMin: 12 },
+        ],
+      },
+    ],
+  },
+  {
+    id: "notion-productivity",
+    slug: "notion-productivity",
+    title: tt("Notion для продуктивності", "Notion for Productivity", "Notion для продуктивности"),
+    category: "productivity",
+    level: "beginner",
+    cover: cover("1499750310107-5fef28a66643"),
+    shortDescription: tt(
+      "Будуємо особисту систему задач, проєктів і нотаток в одному робочому просторі.",
+      "Build a personal system for tasks, projects, and notes in one workspace.",
+      "Строим личную систему задач, проектов и заметок в одном рабочем пространстве.",
+    ),
+    description: tt(
+      "Курс для тих, у кого задачі розкидані по десяти застосунках. Розберемо бази даних, шаблони, зв'язки між сторінками і автоматизацію в Notion - і зберемо особисту систему, яку реально хочеться відкривати щодня.",
+      "A course for those whose tasks are scattered across ten apps. We'll cover databases, templates, relations between pages, and automation in Notion - and build a personal system you'll actually want to open every day.",
+      "Курс для тех, у кого задачи разбросаны по десяти приложениям. Разберём базы данных, шаблоны, связи между страницами и автоматизацию в Notion - и соберём личную систему, которую реально хочется открывать каждый день.",
+    ),
+    price: 1700,
+    rating: 4.7,
+    studentsCount: 3960,
+    instructor: {
+      name: "Ірина Максимів",
+      title: tt("Productivity Consultant", "Productivity Consultant", "Productivity Consultant"),
+      avatar: avatar("1580489944761-15a19d654956"),
+      bio: tt(
+        "Допомагає командам і фрілансерам будувати робочі простори в Notion вже 4 роки. Має шаблон майже на кожен випадок життя.",
+        "Has been helping teams and freelancers build Notion workspaces for 4 years. Has a template for almost every occasion.",
+        "Помогает командам и фрилансерам строить рабочие пространства в Notion уже 4 года. Имеет шаблон почти на каждый случай жизни.",
+      ),
+      studentsCount: 5100,
+      coursesCount: 2,
+    },
+    modules: [
+      {
+        id: "m1",
+        title: tt("Основи робочого простору", "Workspace Basics", "Основы рабочего пространства"),
+        lessons: [
+          { id: "l1", title: tt("Сторінки, блоки і вкладеність", "Pages, blocks, and nesting", "Страницы, блоки и вложенность"), durationMin: 13 },
+          { id: "l2", title: tt("Бази даних: таблиця, дошка, календар", "Databases: table, board, calendar", "Базы данных: таблица, доска, календарь"), durationMin: 16 },
+          { id: "l3", title: tt("Властивості й типи полів", "Properties and field types", "Свойства и типы полей"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m2",
+        title: tt("Система задач", "Task System", "Система задач"),
+        lessons: [
+          { id: "l4", title: tt("Трекер задач з пріоритетами", "A task tracker with priorities", "Трекер задач с приоритетами"), durationMin: 15 },
+          { id: "l5", title: tt("Представлення: фільтри й сортування", "Views: filters and sorting", "Представления: фильтры и сортировка"), durationMin: 14 },
+          { id: "l6", title: tt("Повторювані задачі й нагадування", "Recurring tasks and reminders", "Повторяющиеся задачи и напоминания"), durationMin: 12 },
+        ],
+      },
+      {
+        id: "m3",
+        title: tt("Зв'язки і проєкти", "Relations and Projects", "Связи и проекты"),
+        lessons: [
+          { id: "l7", title: tt("Зв'язки між базами даних", "Relations between databases", "Связи между базами данных"), durationMin: 17 },
+          { id: "l8", title: tt("Rollup для зведеної інформації", "Rollups for summary data", "Rollup для сводной информации"), durationMin: 15 },
+          { id: "l9", title: tt("Трекер проєктів з дедлайнами", "A project tracker with deadlines", "Трекер проектов с дедлайнами"), durationMin: 14 },
+        ],
+      },
+      {
+        id: "m4",
+        title: tt("Шаблони й автоматизація", "Templates and Automation", "Шаблоны и автоматизация"),
+        lessons: [
+          { id: "l10", title: tt("Шаблони, які економлять час", "Templates that save time", "Шаблоны, которые экономят время"), durationMin: 13 },
+          { id: "l11", title: tt("Базова автоматизація дій", "Basic action automation", "Базовая автоматизация действий"), durationMin: 15 },
+          { id: "l12", title: tt("Особистий дашборд на головній сторінці", "A personal dashboard on the home page", "Личный дашборд на главной странице"), durationMin: 16 },
+        ],
+      },
+    ],
+  },
 ];
 
 export const categories: CategoryId[] = [

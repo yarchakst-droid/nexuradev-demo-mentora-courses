@@ -46,9 +46,9 @@ export default function StudentDashboard() {
   if (!data) {
     return (
       <div className="flex flex-col gap-8">
-        <div className="h-32 animate-pulse rounded-[1.4rem] border border-line bg-surface" />
-        <div className="h-56 animate-pulse rounded-[1.4rem] border border-line bg-surface" />
-        <div className="h-64 animate-pulse rounded-[1.4rem] border border-line bg-surface" />
+        <div className="h-32 animate-pulse rounded-[1.4rem] border border-paper/12 bg-paper/[0.04]" />
+        <div className="h-56 animate-pulse rounded-[1.4rem] border border-paper/12 bg-paper/[0.04]" />
+        <div className="h-64 animate-pulse rounded-[1.4rem] border border-paper/12 bg-paper/[0.04]" />
       </div>
     );
   }
@@ -70,8 +70,8 @@ export default function StudentDashboard() {
             <Image src={student.avatar} alt={student.name[lang]} fill sizes="56px" className="object-cover" />
           </span>
           <div>
-            <p className="text-sm text-stone">{t.dashboard.welcomeBack}</p>
-            <h1 className="font-display text-3xl italic text-ink">{student.name[lang].split(" ")[0]}</h1>
+            <p className="text-sm text-paper/60">{t.dashboard.welcomeBack}</p>
+            <h1 className="font-display text-3xl italic text-paper">{student.name[lang].split(" ")[0]}</h1>
           </div>
         </div>
 
@@ -93,18 +93,18 @@ export default function StudentDashboard() {
 
       {continueWatching.length > 0 && (
         <section>
-          <h2 className="mb-4 font-display text-2xl italic text-ink">{t.dashboard.continueWatching}</h2>
+          <h2 className="mb-4 font-display text-2xl italic text-paper">{t.dashboard.continueWatching}</h2>
           <ContinueCarousel courses={continueWatching} />
         </section>
       )}
 
       <section>
-        <h2 className="mb-4 font-display text-2xl italic text-ink">{t.dashboard.myCourses}</h2>
+        <h2 className="mb-4 font-display text-2xl italic text-paper">{t.dashboard.myCourses}</h2>
         <MyCoursesGrid courses={myCourses} />
       </section>
 
       <section>
-        <h2 className="mb-4 font-display text-2xl italic text-ink">{t.dashboard.achievements}</h2>
+        <h2 className="mb-4 font-display text-2xl italic text-paper">{t.dashboard.achievements}</h2>
         <AchievementBadges achievements={achievements} />
       </section>
     </div>

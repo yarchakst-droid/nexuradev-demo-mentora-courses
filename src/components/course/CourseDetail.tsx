@@ -70,60 +70,58 @@ export default function CourseDetail({
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-10">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_23rem]">
-        <div className="flex flex-col gap-8">
-          <VideoPlayerMock cover={course.cover} title={course.title[lang]} durationHours={durationHours} />
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_23rem]">
+      <div className="flex flex-col gap-8">
+        <VideoPlayerMock cover={course.cover} title={course.title[lang]} durationHours={durationHours} />
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-ink-soft">
-            <span className="flex items-center gap-1.5">
-              <StarIcon className="size-4 text-gold" />
-              <span className="font-semibold text-ink">{course.rating.toFixed(1)}</span> {t.course.rating}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <UsersIcon className="size-4" />
-              {course.studentsCount.toLocaleString(locale)} {t.course.students}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ClockIcon className="size-4" />
-              {lessonsCount} {t.course.lessonsTotal} · {durationHours} {t.catalog.hours}
-            </span>
-            <span className="rounded-full border border-line px-3 py-1 text-xs font-medium">
-              {LEVEL_LABELS[course.level][lang]}
-            </span>
-          </div>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-paper/60">
+          <span className="flex items-center gap-1.5">
+            <StarIcon className="size-4 text-gold" />
+            <span className="font-semibold text-paper">{course.rating.toFixed(1)}</span> {t.course.rating}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <UsersIcon className="size-4" />
+            {course.studentsCount.toLocaleString(locale)} {t.course.students}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <ClockIcon className="size-4" />
+            {lessonsCount} {t.course.lessonsTotal} · {durationHours} {t.catalog.hours}
+          </span>
+          <span className="rounded-full border border-paper/20 px-3 py-1 text-xs font-medium text-paper/70">
+            {LEVEL_LABELS[course.level][lang]}
+          </span>
+        </div>
 
-          <p className="max-w-2xl text-lg leading-relaxed text-ink-soft">{course.description[lang]}</p>
+        <p className="max-w-2xl text-lg leading-relaxed text-paper/70">{course.description[lang]}</p>
 
-          <div>
-            <h2 className="mb-4 font-display text-2xl italic text-ink">{t.course.program}</h2>
-            <Syllabus
-              modules={course.modules}
+        <div>
+          <h2 className="mb-4 font-display text-2xl italic text-paper">{t.course.program}</h2>
+          <Syllabus
+            modules={course.modules}
+            enrolled={enrolled}
+            completedLessonIds={completedLessonIds}
+            onToggleLesson={handleToggleLesson}
+            pendingLessonId={pendingLessonId}
+          />
+        </div>
+      </div>
+
+      <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
+        <div className="rounded-[1.4rem] border border-line bg-surface p-6">
+          <p className="font-display text-3xl text-ink">₴{course.price.toLocaleString(locale)}</p>
+          <p className="mt-1 text-sm text-stone">{t.course.onePayment}</p>
+          <div className="mt-5">
+            <EnrollButton
               enrolled={enrolled}
-              completedLessonIds={completedLessonIds}
-              onToggleLesson={handleToggleLesson}
-              pendingLessonId={pendingLessonId}
+              loading={enrollLoading}
+              error={enrollError}
+              onEnroll={handleEnroll}
             />
           </div>
         </div>
 
-        <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-[1.4rem] border border-line bg-surface p-6">
-            <p className="font-display text-3xl text-ink">₴{course.price.toLocaleString(locale)}</p>
-            <p className="mt-1 text-sm text-stone">{t.course.onePayment}</p>
-            <div className="mt-5">
-              <EnrollButton
-                enrolled={enrolled}
-                loading={enrollLoading}
-                error={enrollError}
-                onEnroll={handleEnroll}
-              />
-            </div>
-          </div>
-
-          <InstructorCard instructor={course.instructor} />
-        </aside>
-      </div>
+        <InstructorCard instructor={course.instructor} />
+      </aside>
     </div>
   );
 }

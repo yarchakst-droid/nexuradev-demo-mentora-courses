@@ -11,9 +11,9 @@ export default function MyCoursesGrid({ courses }: { courses: DashboardCourse[] 
 
   if (courses.length === 0) {
     return (
-      <p className="rounded-[1.4rem] border border-dashed border-line px-6 py-10 text-center text-sm text-stone">
+      <p className="rounded-[1.4rem] border border-dashed border-paper/20 px-6 py-10 text-center text-sm text-paper/60">
         {t.dashboard.noCourses}{" "}
-        <Link href="/" className="font-semibold text-moss underline underline-offset-2">
+        <Link href="/" className="font-semibold text-gold-soft underline underline-offset-2">
           {t.dashboard.goToCatalog}
         </Link>
       </p>

@@ -65,7 +65,7 @@ export default function ContinueCarousel({ courses }: { courses: DashboardCourse
             type="button"
             onClick={() => scrollBy(-1)}
             aria-label={t.dashboard.scrollBack}
-            className="flex size-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss/40"
+            className="flex size-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors hover:border-gold/60 hover:text-paper"
           >
             <ChevronLeftIcon className="size-4" />
           </button>
@@ -73,7 +73,7 @@ export default function ContinueCarousel({ courses }: { courses: DashboardCourse
             type="button"
             onClick={() => scrollBy(1)}
             aria-label={t.dashboard.scrollForward}
-            className="flex size-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss/40"
+            className="flex size-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors hover:border-gold/60 hover:text-paper"
           >
             <ChevronRightIcon className="size-4" />
           </button>

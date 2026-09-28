@@ -1,4 +1,4 @@
-import type { CategoryId, Lang, LevelId } from "@/lib/types";
+﻿import type { CategoryId, Lang, LevelId } from "@/lib/types";
 
 export const LANG_LABELS: Record<Lang, string> = {
   uk: "УКР",
@@ -67,6 +67,23 @@ export interface Dictionary {
   };
   footer: {
     tagline: string;
+    description: string;
+    navHeading: string;
+    categoriesHeading: string;
+    contactHeading: string;
+    contactBlurb: string;
+    emailPlaceholder: string;
+    subscribe: string;
+    rights: string;
+    credit: string;
+  };
+  hero: {
+    h1Pre: string;
+    h1Em1: string;
+    h1Mid: string;
+    h1Em2: string;
+    sub: string;
+    cta: string;
   };
   catalog: {
     eyebrow: string;
@@ -136,6 +153,23 @@ const uk: Dictionary = {
   },
   footer: {
     tagline: "Демо-проєкт для портфоліо NexuraDev · навчальні дані вигадані",
+    description: "Навчальна платформа з курсами від практиків індустрії - без води, з реальними проєктами.",
+    navHeading: "Навігація",
+    categoriesHeading: "Категорії",
+    contactHeading: "Будьте на зв'язку",
+    contactBlurb: "Новини про нові курси та знижки - без спаму.",
+    emailPlaceholder: "Ваш email",
+    subscribe: "Підписатися",
+    rights: "© 2026 Mentora. Усі права захищено.",
+    credit: "Дизайн та розробка - NexuraDev",
+  },
+  hero: {
+    h1Pre: "Курси, що",
+    h1Em1: "перетворюють",
+    h1Mid: "знання на",
+    h1Em2: "кар'єру.",
+    sub: "Курси від практиків для тих, хто вчиться вночі, мріє вдень і не боїться почати заново.",
+    cta: "Обрати курс",
   },
   catalog: {
     eyebrow: "Каталог курсів",
@@ -206,6 +240,23 @@ const en: Dictionary = {
   },
   footer: {
     tagline: "NexuraDev portfolio demo · course data is fictional",
+    description: "An education platform with courses from industry practitioners — no fluff, real projects.",
+    navHeading: "Navigation",
+    categoriesHeading: "Categories",
+    contactHeading: "Stay in the loop",
+    contactBlurb: "News about new courses and discounts — no spam.",
+    emailPlaceholder: "Your email",
+    subscribe: "Subscribe",
+    rights: "© 2026 Mentora. All rights reserved.",
+    credit: "Designed & built by NexuraDev",
+  },
+  hero: {
+    h1Pre: "Courses that",
+    h1Em1: "turn",
+    h1Mid: "knowledge into",
+    h1Em2: "a career.",
+    sub: "Courses built by practitioners — for those who study at night, dream by day, and aren't afraid to start over.",
+    cta: "Browse courses",
   },
   catalog: {
     eyebrow: "Course Catalog",
@@ -276,6 +327,23 @@ const ru: Dictionary = {
   },
   footer: {
     tagline: "Демо-проект для портфолио NexuraDev · учебные данные вымышленные",
+    description: "Образовательная платформа с курсами от практиков индустрии - без воды, с реальными проектами.",
+    navHeading: "Навигация",
+    categoriesHeading: "Категории",
+    contactHeading: "Будьте на связи",
+    contactBlurb: "Новости о новых курсах и скидках - без спама.",
+    emailPlaceholder: "Ваш email",
+    subscribe: "Подписаться",
+    rights: "© 2026 Mentora. Все права защищены.",
+    credit: "Дизайн и разработка - NexuraDev",
+  },
+  hero: {
+    h1Pre: "Курсы, которые",
+    h1Em1: "превращают",
+    h1Mid: "знания в",
+    h1Em2: "карьеру.",
+    sub: "Курсы от практиков для тех, кто учится ночью, мечтает днём и не боится начать заново.",
+    cta: "Выбрать курс",
   },
   catalog: {
     eyebrow: "Каталог курсов",

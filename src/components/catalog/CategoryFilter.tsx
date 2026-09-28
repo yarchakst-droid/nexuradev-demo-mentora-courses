@@ -32,15 +32,15 @@ export default function CategoryFilter({
             onClick={() => onChange(option)}
             className={`relative whitespace-nowrap rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
               isActive
-                ? "border-transparent text-paper"
-                : "border-line text-ink-soft hover:border-moss/40"
+                ? "border-transparent text-ink"
+                : "border-paper/20 text-paper/75 hover:border-gold/50 hover:text-paper"
             }`}
           >
             {isActive && (
               <motion.span
                 layoutId="category-pill"
                 transition={{ type: "spring", stiffness: 400, damping: 32 }}
-                className="absolute inset-0 rounded-full bg-moss"
+                className="absolute inset-0 rounded-full bg-gold"
               />
             )}
             <span className="relative">{label}</span>

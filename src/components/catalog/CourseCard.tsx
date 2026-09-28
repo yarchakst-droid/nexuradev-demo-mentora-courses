@@ -15,6 +15,7 @@ export default function CourseCard({ course, index }: { course: CourseSummary; i
   const { lang, t, locale } = useLang();
   const ref = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const rotateX = useSpring(0, spring);
   const rotateY = useSpring(0, spring);
@@ -65,13 +66,19 @@ export default function CourseCard({ course, index }: { course: CourseSummary; i
         }}
       >
         <Link href={`/courses/${course.slug}`} className="flex h-full flex-col">
-          <div className="relative aspect-[4/3] w-full overflow-hidden bg-moss-soft">
+          <div
+            className={`relative aspect-[4/3] w-full overflow-hidden bg-moss-soft ${loaded ? "" : "animate-pulse"}`}
+          >
             <Image
               src={course.cover}
               alt={course.title[lang]}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+              priority={index < 3}
+              onLoad={() => setLoaded(true)}
+              className={`object-cover transition-[opacity,transform] duration-500 group-hover:scale-[1.05] ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
             />
             <div className="absolute inset-x-0 top-0 flex items-start justify-between p-3">
               <span className="rounded-full bg-ink/80 px-3 py-1 text-xs font-medium text-paper backdrop-blur-sm">

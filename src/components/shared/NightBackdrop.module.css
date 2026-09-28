@@ -1,0 +1,146 @@
+/*
+  Shared dark backdrop for sections that follow the video hero (catalog,
+  dashboard) — a soft navy-to-near-black gradient continuing the hero's own
+  color, a warm glow echoing the video's laptop light, and a few stars
+  dissolving into the depth. No hard color seam against the hero above.
+*/
+
+.night {
+  position: relative;
+  overflow: hidden;
+  /* Deeper and darker than before, reaching near-black sooner — reads as a
+     backdrop that recedes into distance rather than a nearby wall of color. */
+  background: linear-gradient(180deg, #002b42 0%, #031222 30%, #02060d 70%, #010409 100%);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(55% 38% at 50% 0%, rgba(230, 177, 105, 0.12), rgba(230, 177, 105, 0) 68%);
+  pointer-events: none;
+}
+
+/* Darkens the edges relative to the center so the foreground content
+   (which sits over the brighter middle) reads as closer, and the backdrop
+   itself reads as falling away toward the sides — a simple depth cue. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 70% at 50% 30%, transparent 45%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(1.4px 1.4px at 12% 10%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 22% 24%, rgba(255, 255, 255, 0.38), transparent),
+    radial-gradient(1.6px 1.6px at 34% 7%, rgba(255, 255, 255, 0.65), transparent),
+    radial-gradient(1px 1px at 45% 17%, rgba(255, 255, 255, 0.42), transparent),
+    radial-gradient(1.4px 1.4px at 58% 12%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 68% 22%, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1.6px 1.6px at 78% 9%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 88% 19%, rgba(255, 255, 255, 0.42), transparent),
+    radial-gradient(1.4px 1.4px at 6% 20%, rgba(255, 255, 255, 0.42), transparent),
+    radial-gradient(1px 1px at 95% 6%, rgba(255, 255, 255, 0.38), transparent),
+    radial-gradient(1.2px 1.2px at 15% 33%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 27% 38%, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(1.5px 1.5px at 40% 29%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 52% 41%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.3px 1.3px at 64% 34%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 74% 44%, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(1.5px 1.5px at 84% 30%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 92% 40%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.2px 1.2px at 3% 45%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 10% 55%, rgba(255, 255, 255, 0.24), transparent),
+    radial-gradient(1.3px 1.3px at 30% 52%, rgba(255, 255, 255, 0.38), transparent),
+    radial-gradient(1px 1px at 48% 58%, rgba(255, 255, 255, 0.24), transparent),
+    radial-gradient(1.3px 1.3px at 70% 55%, rgba(255, 255, 255, 0.36), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.22), transparent),
+    radial-gradient(1.2px 1.2px at 56% 65%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.4px 1.4px at 18% 68%, rgba(255, 255, 255, 0.34), transparent),
+    radial-gradient(1px 1px at 38% 72%, rgba(255, 255, 255, 0.22), transparent),
+    radial-gradient(1.3px 1.3px at 60% 75%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 80% 70%, rgba(255, 255, 255, 0.22), transparent),
+    radial-gradient(1.2px 1.2px at 96% 62%, rgba(255, 255, 255, 0.26), transparent),
+    radial-gradient(1px 1px at 2% 62%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1.4px 1.4px at 25% 5%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 50% 3%, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1.3px 1.3px at 72% 4%, rgba(255, 255, 255, 0.42), transparent),
+    radial-gradient(1px 1px at 8% 8%, rgba(255, 255, 255, 0.3), transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 30%, transparent 85%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 30%, transparent 85%);
+  pointer-events: none;
+}
+
+/* A second, dimmer field of much smaller points that runs the full height
+   of the section with no fade-out — the sense of a starfield that keeps
+   going, rather than a patch of stars near the top. */
+.starsDeep {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 340px 420px;
+  background-image:
+    radial-gradient(0.9px 0.9px at 20% 15%, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(0.7px 0.7px at 60% 40%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(0.9px 0.9px at 85% 70%, rgba(255, 255, 255, 0.24), transparent),
+    radial-gradient(0.7px 0.7px at 35% 80%, rgba(255, 255, 255, 0.18), transparent),
+    radial-gradient(0.8px 0.8px at 5% 55%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(0.7px 0.7px at 92% 25%, rgba(255, 255, 255, 0.22), transparent);
+  pointer-events: none;
+}
+
+.comets {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.comet {
+  position: absolute;
+  top: var(--top, 10%);
+  left: var(--left, 5%);
+  width: 130px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 68%, rgba(255, 255, 255, 0) 100%);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+  transform: rotate(var(--rot, -28deg));
+  opacity: 0;
+  animation: comet-streak var(--dur, 10s) ease-in var(--delay, 0s) infinite;
+}
+
+@keyframes comet-streak {
+  0%,
+  90% {
+    opacity: 0;
+    translate: 0 0;
+  }
+  92% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.9;
+    translate: var(--tx, 240px) var(--ty, 130px);
+  }
+  100% {
+    opacity: 0;
+    translate: var(--tx, 240px) var(--ty, 130px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comet {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

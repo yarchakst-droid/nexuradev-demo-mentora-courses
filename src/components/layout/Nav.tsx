@@ -2,11 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { useLang } from "@/i18n/LangContext";
 
 export default function Nav() {
   const { t } = useLang();
+  const pathname = usePathname();
+
+  // The homepage hero owns its own full-bleed nav (glass, over video) — see
+  // CinematicHero — so the sitewide sticky header stays out of its way there.
+  if (pathname === "/") return null;
 
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-paper/85 backdrop-blur-md">
