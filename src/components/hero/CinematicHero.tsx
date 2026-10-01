@@ -23,15 +23,44 @@ export default function CinematicHero() {
     const video = videoRef.current;
     if (!video) return;
 
+    // iOS can leave a muted/autoplay/playsInline video paused (showing its
+    // native tap-to-play button) instead of starting it — e.g. when Low
+    // Power Mode is on, or when the autoplay attempt races the network
+    // fetch. Setting `muted` explicitly (not just via the JSX attribute)
+    // and retrying play() on load progress and on the first user gesture
+    // makes sure it always ends up playing on its own.
+    video.muted = true;
+    video.defaultMuted = true;
+
+    let isIntersecting = false;
+    const tryPlay = () => {
+      if (isIntersecting && video.paused) video.play().catch(() => {});
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) video.play().catch(() => {});
+        isIntersecting = entry.isIntersecting;
+        if (isIntersecting) tryPlay();
         else video.pause();
       },
       { threshold: 0 }
     );
     observer.observe(video);
-    return () => observer.disconnect();
+
+    video.addEventListener("loadedmetadata", tryPlay);
+    video.addEventListener("canplay", tryPlay);
+    document.addEventListener("visibilitychange", tryPlay);
+    document.addEventListener("touchstart", tryPlay, { passive: true });
+    document.addEventListener("scroll", tryPlay, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      video.removeEventListener("loadedmetadata", tryPlay);
+      video.removeEventListener("canplay", tryPlay);
+      document.removeEventListener("visibilitychange", tryPlay);
+      document.removeEventListener("touchstart", tryPlay);
+      document.removeEventListener("scroll", tryPlay);
+    };
   }, []);
 
   return (
