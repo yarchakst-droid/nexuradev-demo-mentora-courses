@@ -132,6 +132,8 @@ export interface Dictionary {
     loadError: string;
     scrollBack: string;
     scrollForward: string;
+    achievementEarned: string;
+    achievementProgress: (percent: number) => string;
   };
   server: {
     invalidBody: string;
@@ -219,6 +221,8 @@ const uk: Dictionary = {
     loadError: "Не вдалося завантажити кабінет студента.",
     scrollBack: "Прокрутити назад",
     scrollForward: "Прокрутити вперед",
+    achievementEarned: "Отримано",
+    achievementProgress: (percent) => `${percent}% до отримання`,
   },
   server: {
     invalidBody: "Некоректне тіло запиту.",
@@ -306,6 +310,8 @@ const en: Dictionary = {
     loadError: "Failed to load the student dashboard.",
     scrollBack: "Scroll back",
     scrollForward: "Scroll forward",
+    achievementEarned: "Earned",
+    achievementProgress: (percent) => `${percent}% there`,
   },
   server: {
     invalidBody: "Invalid request body.",
@@ -393,6 +399,8 @@ const ru: Dictionary = {
     loadError: "Не удалось загрузить кабинет студента.",
     scrollBack: "Прокрутить назад",
     scrollForward: "Прокрутить вперёд",
+    achievementEarned: "Получено",
+    achievementProgress: (percent) => `${percent}% до получения`,
   },
   server: {
     invalidBody: "Некорректное тело запроса.",

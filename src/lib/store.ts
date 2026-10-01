@@ -21,6 +21,8 @@ export interface Achievement {
   title: LocalizedText;
   description: LocalizedText;
   earned: boolean;
+  /** 0-100 — how close the student is to earning it (100 once earned). */
+  progress: number;
 }
 
 const DEMO_STUDENT_ID = "demo-student";
@@ -217,12 +219,25 @@ export function getDashboard(): DashboardData {
     return course ? sum + totalMinutes(course) / 60 : sum;
   }, 0);
 
+  const bestCourseProgress = myCourses.reduce((max, c) => Math.max(max, c.progress), 0);
+
   const achievementEarned: Record<keyof typeof ACHIEVEMENT_LABELS, boolean> = {
     "first-step": myCourses.length >= 1,
-    "on-a-roll": myCourses.some((c) => c.progress >= 50),
+    "on-a-roll": bestCourseProgress >= 50,
     "course-finished": completedCount >= 1,
     collector: myCourses.length >= 3,
     marathoner: lessonsCompleted >= 30,
+  };
+
+  // Progress toward each not-yet-earned achievement, as a 0-100 percentage
+  // of its own target, so the dashboard can show a meaningful bar instead
+  // of just a locked/unlocked state.
+  const achievementProgress: Record<keyof typeof ACHIEVEMENT_LABELS, number> = {
+    "first-step": myCourses.length >= 1 ? 100 : 0,
+    "on-a-roll": Math.min(100, Math.round((bestCourseProgress / 50) * 100)),
+    "course-finished": bestCourseProgress,
+    collector: Math.min(100, Math.round((myCourses.length / 3) * 100)),
+    marathoner: Math.min(100, Math.round((lessonsCompleted / 30) * 100)),
   };
 
   const langs: Lang[] = ["uk", "en", "ru"];
@@ -234,6 +249,7 @@ export function getDashboard(): DashboardData {
         langs.map((l) => [l, ACHIEVEMENT_LABELS[id][l].description]),
       ) as LocalizedText,
       earned: achievementEarned[id],
+      progress: achievementEarned[id] ? 100 : achievementProgress[id],
     }),
   );
 
