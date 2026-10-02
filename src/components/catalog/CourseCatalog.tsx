@@ -66,11 +66,11 @@ export default function CourseCatalog() {
       )}
 
       {!courses && !error && (
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
-              className="h-[22rem] animate-pulse rounded-[1.4rem] border border-line bg-surface"
+              className="h-[16rem] animate-pulse rounded-[1.4rem] border border-line bg-surface sm:h-[22rem]"
             />
           ))}
         </div>
@@ -80,7 +80,7 @@ export default function CourseCatalog() {
         <AnimatePresence mode="popLayout">
           <motion.div
             layout
-            className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="mt-8 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3"
           >
             {pageItems.map((course, index) => (
               <CourseCard key={course.id} course={course} index={index} />

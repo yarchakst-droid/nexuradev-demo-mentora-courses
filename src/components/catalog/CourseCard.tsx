@@ -95,31 +95,31 @@ export default function CourseCard({ course, index }: { course: CourseSummary; i
                 loaded ? "opacity-100" : "opacity-0"
               }`}
             />
-            <div className="absolute inset-x-0 top-0 flex items-start justify-between p-3">
-              <span className="rounded-full bg-ink/80 px-3 py-1 text-xs font-medium text-paper backdrop-blur-sm">
+            <div className="absolute inset-x-0 top-0 flex items-start justify-between p-2 sm:p-3">
+              <span className="rounded-full bg-ink/80 px-2 py-0.5 text-[10px] font-medium text-paper backdrop-blur-sm sm:px-3 sm:py-1 sm:text-xs">
                 {CATEGORY_LABELS[course.category][lang]}
               </span>
-              <span className="flex items-center gap-1 rounded-full bg-paper/90 px-2.5 py-1 text-xs font-semibold text-ink">
-                <StarIcon className="size-3.5 text-gold" />
+              <span className="flex items-center gap-1 rounded-full bg-paper/90 px-1.5 py-0.5 text-[10px] font-semibold text-ink sm:px-2.5 sm:py-1 sm:text-xs">
+                <StarIcon className="size-3 text-gold sm:size-3.5" />
                 {course.rating.toFixed(1)}
               </span>
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col gap-3 p-5">
+          <div className="flex flex-1 flex-col gap-2 p-3 sm:gap-3 sm:p-5">
             <div>
-              <h3 className="text-balance font-display text-xl leading-snug text-ink">
+              <h3 className="text-balance font-display text-sm leading-snug text-ink sm:text-xl">
                 {course.title[lang]}
               </h3>
-              <p className="mt-1 text-sm text-stone">{course.instructorName}</p>
+              <p className="mt-1 truncate text-xs text-stone sm:text-sm">{course.instructorName}</p>
             </div>
 
-            <div className="mt-auto flex items-center justify-between text-xs text-ink-soft">
-              <span className="flex items-center gap-1.5">
-                <ClockIcon className="size-3.5" />
+            <div className="mt-auto flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-ink-soft sm:justify-between sm:text-xs">
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <ClockIcon className="size-3 sm:size-3.5" />
                 {course.durationHours} {t.catalog.hours}
               </span>
-              <span className="flex items-center gap-1.5">
+              <span className="hidden items-center gap-1.5 sm:flex">
                 <UsersIcon className="size-3.5" />
                 {course.studentsCount.toLocaleString(locale)}
               </span>
