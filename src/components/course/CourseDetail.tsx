@@ -74,6 +74,8 @@ export default function CourseDetail({
       <div className="flex flex-col gap-8">
         <VideoPlayerMock cover={course.cover} title={course.title[lang]} durationHours={durationHours} />
 
+        <h1 className="font-display text-3xl italic leading-tight text-paper sm:text-4xl">{course.title[lang]}</h1>
+
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-paper/60">
           <span className="flex items-center gap-1.5">
             <StarIcon className="size-4 text-gold" />

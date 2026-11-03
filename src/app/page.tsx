@@ -18,9 +18,9 @@ export default function CatalogPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gold-soft">
               {t.catalog.eyebrow}
             </p>
-            <h1 className="mt-3 text-balance font-display text-4xl italic leading-[1.1] text-paper sm:text-5xl">
+            <h2 className="mt-3 text-balance font-display text-4xl italic leading-[1.1] text-paper sm:text-5xl">
               {t.catalog.headline}
-            </h1>
+            </h2>
             <p className="mt-4 text-lg leading-relaxed text-paper/70">{t.catalog.subtitle}</p>
           </div>
 
